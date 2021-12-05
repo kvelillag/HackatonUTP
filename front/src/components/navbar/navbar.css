@@ -7,6 +7,13 @@
 #navbar .dropdown-toggle {
   background-color: #1a6bd6;
   border-width: 0;
+  right: 0px;
+  left: auto;
+}
+
+#navbar .dropdown-menu {
+  right: 0px;
+  left: auto;
 }
 
 #navbar #dropdown-header .row:nth-child(1) {

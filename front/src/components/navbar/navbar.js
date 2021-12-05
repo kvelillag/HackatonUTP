@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import "./navbar.css";
 import Cookies from "universal-cookie/es6";
+import logo from "../img/logo.png";
 
 const cookies = new Cookies();
 
@@ -29,7 +30,16 @@ export default class Menu extends React.Component {
     return (
       <Navbar id="navbar" variant="dark" sticky="top">
         <Container>
-          <Navbar.Brand href="/">ExperiMental</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <img
+              alt=""
+              src={logo}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{" "}
+            ExperiMental
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto"></Nav>
@@ -38,14 +48,14 @@ export default class Menu extends React.Component {
                 <Row>
                   <FontAwesomeIcon icon={faUserCircle} />
                 </Row>
-                <Row>#USUARIO#</Row>
+                <Row>USUARIO</Row>
               </Dropdown.Header>
               <Dropdown.Item href="/">Home</Dropdown.Item>
               <Dropdown.Item href="/login">Iniciar Sesión</Dropdown.Item>
               <Dropdown.Item href="/retos">Gestionar Retos</Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item onClick={() => this.logout()}>
-                Cerrar sesión
+                Cerrar Sesión
               </Dropdown.Item>
             </DropdownButton>
           </Navbar.Collapse>

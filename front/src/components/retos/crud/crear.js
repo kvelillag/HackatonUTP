@@ -78,8 +78,10 @@ export default class Crear extends React.Component {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasic">
-              <Form.Label>Descripciíon</Form.Label>
+              <Form.Label>Descripción</Form.Label>
               <Form.Control
+                as="textarea"
+                rows={3}
                 onChange={(e) => this.setValue("descripcion", e.target.value)}
               />
             </Form.Group>

@@ -128,6 +128,8 @@ export default class Editar extends React.Component {
             <Form.Group className="mb-3" controlId="formBasic">
               <Form.Label>Descripción</Form.Label>
               <Form.Control
+                as="textarea"
+                rows={3}
                 onChange={(e) => this.setValue("descripcion", e.target.value)}
                 value={this.state.reto.descripcion}
               />
