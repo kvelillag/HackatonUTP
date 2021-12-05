@@ -42,7 +42,6 @@ export default class Menu extends React.Component {
               </Dropdown.Header>
               <Dropdown.Item href="/">Home</Dropdown.Item>
               <Dropdown.Item href="/login">Iniciar Sesión</Dropdown.Item>
-              <Dropdown.Item href="/accesorios">CRUD</Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item onClick={() => this.logout()}>
                 Cerrar sesión

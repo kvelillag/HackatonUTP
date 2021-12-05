@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+/********** Base styles **********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+/********** Login styles **********/
+
+#login-container {
+  border-radius: 0%;
+  background: rgb(230, 228, 228);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 100px;
+}
+
+#login-container h2 {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#login-container form {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+#login-container h2,
+#login-container button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+#login-container .form-label {
+  float: left;
+  font-size: 18px;
+}
+
+#login-container .form-control {
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 1px solid silver;
+  border-radius: 0;
+}
+
+#login-container button {
+  margin-bottom: 15px;
+  height: 100%;
+  width: 100%;
+  background-color: #1a6bd6;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+#login-container button:hover {
+  opacity: 1;
+}
+
+@media (min-width: 992px) {
+  #login-container {
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #login-container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  #login-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 575px) {
+  #login-container {
+    width: 85%;
+  }
+}
