@@ -29,7 +29,7 @@ export default class Menu extends React.Component {
     return (
       <Navbar id="navbar" variant="dark" sticky="top">
         <Container>
-          <Navbar.Brand href="#home">ExperiMental</Navbar.Brand>
+          <Navbar.Brand href="/">ExperiMental</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto"></Nav>
@@ -42,6 +42,7 @@ export default class Menu extends React.Component {
               </Dropdown.Header>
               <Dropdown.Item href="/">Home</Dropdown.Item>
               <Dropdown.Item href="/login">Iniciar Sesión</Dropdown.Item>
+              <Dropdown.Item href="/retos">Gestionar Retos</Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item onClick={() => this.logout()}>
                 Cerrar sesión

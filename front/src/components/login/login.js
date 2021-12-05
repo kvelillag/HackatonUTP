@@ -23,7 +23,7 @@ export default class Login extends React.Component {
   iniciarSesion() {
     this.setState({ loading: true });
     axios
-      .post(`${host}/retos/login`, {
+      .post(`${host}/administrador/login`, {
         usuario: this.state.usuario,
         pass: this.state.pass,
       })
