@@ -89,11 +89,17 @@ export default class Crear extends React.Component {
                 onChange={(e) => this.setValue("categoria", e.target.value)}
               >
                 <option>Seleccione una categoría</option>
-                <option value="Anillos">Anillos</option>
-                <option value="Cadenas">Cadenas</option>
-                <option value="Aretes">Aretes</option>
-                <option value="Pulseras">Pulseras</option>
+                <option value="Física">Física</option>
+                <option value="Química">Química</option>
+                <option value="Programación">Programación</option>
+                <option value="Astronomía">Astronomía</option>
               </Form.Select>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasic">
+              <Form.Label>Imagen</Form.Label>
+              <Form.Control
+                onChange={(e) => this.setValue("imagen", e.target.value)}
+              />
             </Form.Group>
             <Button
               variant="primary"

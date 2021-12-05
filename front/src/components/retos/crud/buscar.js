@@ -6,6 +6,10 @@ import { request } from "../../helper/helper";
 import Loading from "../../loading/loading";
 import MessagePrompt from "../../prompts/message";
 
+function imageFormatter(cell, row) {
+  return <img style={{ width: 100 }} src={cell} />;
+}
+
 const columns = [
   {
     dataField: "_id",
@@ -24,6 +28,11 @@ const columns = [
     dataField: "categoria",
     text: "Categoría",
   },
+  {
+    dataField: "imagen",
+    text: "Imagen",
+    formatter: imageFormatter,
+  },
 ];
 
 export default class Buscar extends React.Component {
@@ -38,6 +47,7 @@ export default class Buscar extends React.Component {
       idReto: null,
       loading: false,
       message: { text: "", show: false },
+      redirect: false,
     };
     this.onClickEditButton = this.onClickEditButton.bind(this);
     this.onClickDeleteButton = this.onClickDeleteButton.bind(this);

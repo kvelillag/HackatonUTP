@@ -13,19 +13,19 @@ export default class Retos extends React.Component {
       _id: null,
     };
     this.changeTab = this.changeTab.bind(this);
-    this.setIdRetos = this.setIdRetos.bind(this);
-    this.getIdRetos = this.getIdRetos.bind(this);
+    this.setIdReto = this.setIdReto.bind(this);
+    this.getIdReto = this.getIdReto.bind(this);
   }
 
   changeTab(tab) {
     this.setState({ currentTab: tab });
   }
 
-  setIdRetos(id) {
+  setIdReto(id) {
     this.setState({ _id: id });
   }
 
-  getIdRetos() {
+  getIdReto() {
     return this.state._id;
   }
 
@@ -49,11 +49,11 @@ export default class Retos extends React.Component {
         </Row>
         <Row>
           {this.state.currentTab === "buscar" ? (
-            <Buscar changeTab={this.changeTab} setIdRetos={this.setIdRetos} />
+            <Buscar changeTab={this.changeTab} setIdReto={this.setIdReto} />
           ) : this.state.currentTab === "crear" ? (
             <Crear changeTab={this.changeTab} />
           ) : (
-            <Editar changeTab={this.changeTab} getIdRetos={this.getIdRetos} />
+            <Editar changeTab={this.changeTab} getIdReto={this.getIdReto} />
           )}
         </Row>
       </Container>

@@ -12,6 +12,7 @@ import Loading from "../loading/loading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { isUndefined } from "util";
+import "./grid.css";
 
 const { SearchBar } = Search;
 
@@ -101,7 +102,10 @@ export default class DataGrid extends React.Component {
                       </Col>
                       <Col>
                         {" "}
-                        <SearchBar {...props.searchProps} />{" "}
+                        <SearchBar
+                          {...props.searchProps}
+                          placeholder="Buscar ..."
+                        />{" "}
                       </Col>
                     </Row>
                     <BootstrapTable

@@ -11,6 +11,7 @@ exports.create = function (req, res) {
     nombre: req.body.nombre,
     descripcion: req.body.descripcion,
     categoria: req.body.categoria,
+    imagen: req.body.imagen,
   });
 
   reto.save(function (err) {
@@ -47,6 +48,7 @@ exports.update = function (req, res) {
     nombre: req.body.nombre,
     descripcion: req.body.descripcion,
     categoria: req.body.categoria,
+    imagen: req.body.imagen,
   };
   Reto.findByIdAndUpdate(req.params.id, { $set: reto }, function (err) {
     if (err) {

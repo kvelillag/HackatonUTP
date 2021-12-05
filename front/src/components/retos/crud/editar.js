@@ -13,6 +13,7 @@ export default class Editar extends React.Component {
         nombre: "",
         descripcion: "",
         categoria: "",
+        imagen: "",
       },
       loading: false,
       message: { text: "", show: false },
@@ -128,7 +129,7 @@ export default class Editar extends React.Component {
               <Form.Label>Descripción</Form.Label>
               <Form.Control
                 onChange={(e) => this.setValue("descripcion", e.target.value)}
-                value={this.state.reto.precio}
+                value={this.state.reto.descripcion}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasic">
@@ -137,11 +138,18 @@ export default class Editar extends React.Component {
                 onChange={(e) => this.setValue("categoria", e.target.value)}
               >
                 <option>{this.state.reto.categoria}</option>
-                <option value="Anillos">Anillos</option>
-                <option value="Cadenas">Cadenas</option>
-                <option value="Aretes">Aretes</option>
-                <option value="Pulseras">Pulseras</option>
+                <option value="Física">Física</option>
+                <option value="Química">Química</option>
+                <option value="Programación">Programación</option>
+                <option value="Astronomía">Astronomía</option>
               </Form.Select>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasic">
+              <Form.Label>Imagen</Form.Label>
+              <Form.Control
+                onChange={(e) => this.setValue("imagen", e.target.value)}
+                value={this.state.reto.imagen}
+              />
             </Form.Group>
             <Button
               variant="primary"
