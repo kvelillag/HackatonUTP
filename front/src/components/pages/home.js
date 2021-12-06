@@ -3,7 +3,7 @@ import { Carousel, Row } from "react-bootstrap";
 import physics from "../img/physics.jpg";
 import chemestry from "../img/chemestry.jpg";
 import astronomy from "../img/astronomy.jpg";
-import programming from "../img/programming.jpg";
+import biology from "../img/biology.jpg";
 import RetosCards from "../cards/cards";
 import "./home.css";
 
@@ -50,11 +50,11 @@ export default class Home extends React.Component {
               <img
                 id="banner"
                 className="d-block w-100"
-                src={programming}
+                src={biology}
                 alt="First slide"
               />
               <Carousel.Caption>
-                <h2>Programación</h2>
+                <h2>Biología</h2>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>

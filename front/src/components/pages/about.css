@@ -1,0 +1,17 @@
+#about-container {
+  margin-top: 30px;
+}
+
+#about-container p {
+  text-align: justify;
+}
+
+#explain-logo,
+#nobel {
+  width: 350px;
+}
+
+#main-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

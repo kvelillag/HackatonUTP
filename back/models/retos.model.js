@@ -5,6 +5,7 @@ const RetosSchema = new Schema({
   descripcion: { type: String, required: true, max: 500 },
   categoria: { type: String, required: true, max: 40 },
   imagen: { type: String, required: true, max: 150 },
+  videos: [{ type: Object, max: 150 }],
 });
 
 module.exports = mongoose.model("retos", RetosSchema);

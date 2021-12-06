@@ -4,6 +4,8 @@ import Login from "../login/login";
 import Home from "../pages/home";
 import PrivateRouter from "../auth/privaterouter";
 import Retos from "../retos/index";
+import RetoScreen from "../pages/reto";
+import About from "../pages/about";
 
 export default function AppRouter() {
   return (
@@ -11,6 +13,8 @@ export default function AppRouter() {
       <Switch>
         <Route exact path={["/"]} component={Home} />
         <Route exact path={["/login"]} component={Login} />
+        <Route exact path={["/about"]} component={About} />
+        <Route exact path={["/reto/:idReto"]} component={RetoScreen} />
         <PrivateRouter exact path={["/retos"]} component={Retos} />
         <Route
           path={"*"}

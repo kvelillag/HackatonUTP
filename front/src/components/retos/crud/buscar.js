@@ -33,6 +33,11 @@ const columns = [
     text: "Imagen",
     formatter: imageFormatter,
   },
+  {
+    dataField: "videos",
+    text: "Videos",
+    hidden: true,
+  },
 ];
 
 export default class Buscar extends React.Component {

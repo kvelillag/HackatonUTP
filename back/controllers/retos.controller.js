@@ -12,6 +12,7 @@ exports.create = function (req, res) {
     descripcion: req.body.descripcion,
     categoria: req.body.categoria,
     imagen: req.body.imagen,
+    videos: req.body.videos,
   });
 
   reto.save(function (err) {
@@ -49,6 +50,7 @@ exports.update = function (req, res) {
     descripcion: req.body.descripcion,
     categoria: req.body.categoria,
     imagen: req.body.imagen,
+    videos: req.body.videos,
   };
   Reto.findByIdAndUpdate(req.params.id, { $set: reto }, function (err) {
     if (err) {
@@ -76,6 +78,25 @@ exports.remove = function (req, res) {
     }
     (response.exito = true),
       (response.msg = "El reto se eliminó correctamente"),
+      res.json(response);
+  });
+};
+
+// Function to update videos of a challenge
+exports.updateVideo = function (req, res) {
+  let reto = {
+    videos: req.body.videos,
+  };
+  Reto.findByIdAndUpdate(req.params.id, { $addToSet: reto }, function (err) {
+    if (err) {
+      (console.error = err),
+        (response.exito = false),
+        (response.msg = "Error al guardar video el reto"),
+        res.json(response);
+      return;
+    }
+    (response.exito = true),
+      (response.msg = "El video se agregó correctamente"),
       res.json(response);
   });
 };

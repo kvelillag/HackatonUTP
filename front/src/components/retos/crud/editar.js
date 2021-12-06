@@ -142,7 +142,7 @@ export default class Editar extends React.Component {
                 <option>{this.state.reto.categoria}</option>
                 <option value="Física">Física</option>
                 <option value="Química">Química</option>
-                <option value="Programación">Programación</option>
+                <option value="Biología">Biología</option>
                 <option value="Astronomía">Astronomía</option>
               </Form.Select>
             </Form.Group>

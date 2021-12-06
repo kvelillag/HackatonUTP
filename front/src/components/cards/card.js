@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import "./card.css";
 
@@ -20,10 +21,14 @@ export default class RetoCard extends React.Component {
             {this.props.description.length < 200
               ? `${this.props.description}`
               : `${this.props.description.substring(0, 197)}... `}
-            <a href="#">Ver más</a>
+            <a href={`/reto/${this.props.idChallenge}`}>Más</a>
           </Card.Text>
-          <Button variant="primary" disabled>
-            Participar
+          <Button
+            id="reto-btn"
+            variant="primary"
+            href={`/reto/${this.props.idChallenge}`}
+          >
+            ¡Acepta el reto!
           </Button>
         </Card.Body>
       </Card>

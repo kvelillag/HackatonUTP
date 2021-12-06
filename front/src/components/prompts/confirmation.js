@@ -36,10 +36,18 @@ export default class ConfirmationPrompt extends React.Component {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => this.props.onCancel()}>
+          <Button
+            id="reto-btn"
+            variant="secondary"
+            onClick={() => this.props.onCancel()}
+          >
             Cerrar
           </Button>
-          <Button variant="primary" onClick={() => this.props.onConfirm()}>
+          <Button
+            id="reto-btn"
+            variant="primary"
+            onClick={() => this.props.onConfirm()}
+          >
             Confirmar
           </Button>
         </Modal.Footer>

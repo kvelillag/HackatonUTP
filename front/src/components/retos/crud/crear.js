@@ -93,7 +93,7 @@ export default class Crear extends React.Component {
                 <option>Seleccione una categoría</option>
                 <option value="Física">Física</option>
                 <option value="Química">Química</option>
-                <option value="Programación">Programación</option>
+                <option value="Biología">Biología</option>
                 <option value="Astronomía">Astronomía</option>
               </Form.Select>
             </Form.Group>
@@ -101,6 +101,13 @@ export default class Crear extends React.Component {
               <Form.Label>Imagen</Form.Label>
               <Form.Control
                 onChange={(e) => this.setValue("imagen", e.target.value)}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasic">
+              <Form.Label>Videos</Form.Label>
+              <Form.Control
+                onChange={(e) => this.setValue("videos", e.target.value)}
+                placeholder="No obligatorio. Si agrega, solo debe ser un video"
               />
             </Form.Group>
             <Button

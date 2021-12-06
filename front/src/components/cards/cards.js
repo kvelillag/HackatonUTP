@@ -36,6 +36,7 @@ export default class RetosCards extends React.Component {
               url={reto.imagen}
               description={reto.descripcion}
               category={reto.categoria}
+              idChallenge={reto._id}
             />
           </Col>
         ))}
